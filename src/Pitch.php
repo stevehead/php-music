@@ -44,4 +44,12 @@ class Pitch
             case 11: return 'B';
         }
     }
+
+    public static function noteToFullNoteName($note)
+    {
+        $note = round($note);
+        $noteName = self::noteToNoteName($note);
+        $number = floor($note / 12) - 1;
+        return $noteName . $number;
+    }
 }
