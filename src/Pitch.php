@@ -19,4 +19,10 @@ class Pitch
         $centsOff = 1200 * log($frequency / self::$standardFrequency, 2);
         return 69 + $centsOff / 100;
     }
+
+    public static function noteToFrequency($note)
+    {
+        $centsOff = 100 * ($note - 69);
+        return self::$standardFrequency * pow(2, $centsOff / 1200);
+    }
 }
