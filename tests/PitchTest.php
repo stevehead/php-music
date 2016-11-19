@@ -31,4 +31,13 @@ class PitchTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('C4', Pitch::noteToFullNoteName(60));
         $this->assertEquals('A4', Pitch::noteToFullNoteName(69));
     }
+
+    public function testFullNoteNameToNoteMethod()
+    {
+        $this->assertEquals(0, Pitch::fullNoteNameToNote('C-1'));
+        $this->assertEquals(60, Pitch::fullNoteNameToNote('C4'));
+        $this->assertEquals(69, Pitch::fullNoteNameToNote('A4'));
+        $this->assertEquals(69, Pitch::fullNoteNameToNote('Bbb4'));
+        $this->assertEquals(62, Pitch::fullNoteNameToNote('Cx4'));
+    }
 }
