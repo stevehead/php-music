@@ -13,4 +13,10 @@ class Pitch
     {
         $this->frequency = $frequency;
     }
+
+    public static function frequencyToNote($frequency)
+    {
+        $centsOff = 1200 * log($frequency / self::$standardFrequency, 2);
+        return 69 + $centsOff / 100;
+    }
 }
