@@ -1,0 +1,21 @@
+{
+    "name": "stevehead/Music",
+    "description": "Library that provides music elements for PHP.",
+    "license": "MIT",
+    "keywords": ["music"],
+    "authors": [
+        {
+            "name": "Steve Johnson",
+            "email": "sjohnson0684@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stevehead\\Music\\": "src"
+        }
+    }
+}
